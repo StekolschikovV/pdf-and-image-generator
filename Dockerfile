@@ -23,17 +23,16 @@ RUN addgroup -S pptruser && adduser -S -G pptruser pptruser \
     && chown -R pptruser:pptruser /home/pptruser \
     && chown -R pptruser:pptruser /app
 
-LABEL authors="Waves Production" \
-      org.label-schema.vendor="Waves Labs Backend" \
-      org.label-schema.name="Waves Labs Backend Docker Image" \
-      org.label-schema.description="Waves Labs Backend" \
-      org.label-schema.url="https://waveslabs.com" \
+LABEL authors="Waves" \
+      org.label-schema.vendor="Waves" \
+      org.label-schema.name="Waves Docker Image" \
+      org.label-schema.description="Waves" \
       org.label-schema.schema-version="1.0"
 
 ENV NODE_ENV="production" \
     PORT="3000" \
     USER="pptruser" \
-    LABEL="Waves Labs Backend" \
+    LABEL="Waves" \
     NODE_OPTIONS="--max_old_space_size=2048"
 
 WORKDIR /home/$USER
